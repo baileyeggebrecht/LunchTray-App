@@ -21,7 +21,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- TODO: Add a FragmentContainerView with navigation/mobile_navigation as the navHost -->
+    <!--  Add a FragmentContainerView with navigation/mobile_navigation as the navHost -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"

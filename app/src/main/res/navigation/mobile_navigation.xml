@@ -65,6 +65,9 @@
         <action
             android:id="@+id/action_entreeMenuFragment_to_startOrderFragment"
             app:destination="@id/startOrderFragment" />
+        <action
+            android:id="@+id/action_entreeMenuFragment_to_sideMenuFragment2"
+            app:destination="@id/sideMenuFragment" />
     </fragment>
     <fragment
         android:id="@+id/startOrderFragment"

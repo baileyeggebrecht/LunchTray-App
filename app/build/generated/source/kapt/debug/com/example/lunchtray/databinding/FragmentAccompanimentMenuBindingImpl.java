@@ -26,6 +26,8 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
     @Nullable
     private final android.view.View.OnClickListener mCallback2;
     @Nullable
+    private final android.view.View.OnClickListener mCallback5;
+    @Nullable
     private final android.view.View.OnClickListener mCallback3;
     @Nullable
     private final android.view.View.OnClickListener mCallback1;
@@ -71,6 +73,7 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
         // listeners
         mCallback4 = new com.example.lunchtray.generated.callback.OnClickListener(this, 4);
         mCallback2 = new com.example.lunchtray.generated.callback.OnClickListener(this, 2);
+        mCallback5 = new com.example.lunchtray.generated.callback.OnClickListener(this, 5);
         mCallback3 = new com.example.lunchtray.generated.callback.OnClickListener(this, 3);
         mCallback1 = new com.example.lunchtray.generated.callback.OnClickListener(this, 1);
         invalidateAll();
@@ -250,10 +253,11 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.berries.setOnClickListener(mCallback1);
-            this.cancelButton.setOnClickListener(mCallback3);
-            this.nextButton.setOnClickListener(mCallback4);
-            this.pickles.setOnClickListener(mCallback2);
+            this.berries.setOnClickListener(mCallback2);
+            this.bread.setOnClickListener(mCallback1);
+            this.cancelButton.setOnClickListener(mCallback4);
+            this.nextButton.setOnClickListener(mCallback5);
+            this.pickles.setOnClickListener(mCallback3);
         }
         if ((dirtyFlags & 0xdL) != 0) {
             // api target 1
@@ -278,7 +282,7 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
                 if (accompanimentMenuFragmentJavaLangObjectNull) {
 
 
-                    accompanimentMenuFragment.goToNextScreen();
+                    accompanimentMenuFragment.cancelOrder();
                 }
                 break;
             }
@@ -296,11 +300,11 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
 
 
 
-                    viewModel.setAccompaniment("pickles");
+                    viewModel.setAccompaniment("berries");
                 }
                 break;
             }
-            case 3: {
+            case 5: {
                 // localize variables for thread safety
                 // AccompanimentMenuFragment
                 com.example.lunchtray.ui.order.AccompanimentMenuFragment accompanimentMenuFragment = mAccompanimentMenuFragment;
@@ -313,7 +317,25 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
                 if (accompanimentMenuFragmentJavaLangObjectNull) {
 
 
-                    accompanimentMenuFragment.cancelOrder();
+                    accompanimentMenuFragment.goToNextScreen();
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewModel
+                com.example.lunchtray.model.OrderViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+
+                    viewModel.setAccompaniment("pickles");
                 }
                 break;
             }
@@ -331,7 +353,7 @@ public class FragmentAccompanimentMenuBindingImpl extends FragmentAccompanimentM
 
 
 
-                    viewModel.setAccompaniment("berries");
+                    viewModel.setAccompaniment("bread");
                 }
                 break;
             }
