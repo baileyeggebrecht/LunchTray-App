@@ -24,13 +24,13 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
     private final android.widget.ScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback4;
+    private final android.view.View.OnClickListener mCallback8;
     @Nullable
-    private final android.view.View.OnClickListener mCallback2;
+    private final android.view.View.OnClickListener mCallback6;
     @Nullable
-    private final android.view.View.OnClickListener mCallback3;
+    private final android.view.View.OnClickListener mCallback7;
     @Nullable
-    private final android.view.View.OnClickListener mCallback1;
+    private final android.view.View.OnClickListener mCallback5;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -75,10 +75,10 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
         this.subtotal.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback4 = new com.example.lunchtray.generated.callback.OnClickListener(this, 4);
-        mCallback2 = new com.example.lunchtray.generated.callback.OnClickListener(this, 2);
-        mCallback3 = new com.example.lunchtray.generated.callback.OnClickListener(this, 3);
-        mCallback1 = new com.example.lunchtray.generated.callback.OnClickListener(this, 1);
+        mCallback8 = new com.example.lunchtray.generated.callback.OnClickListener(this, 4);
+        mCallback6 = new com.example.lunchtray.generated.callback.OnClickListener(this, 2);
+        mCallback7 = new com.example.lunchtray.generated.callback.OnClickListener(this, 3);
+        mCallback5 = new com.example.lunchtray.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -267,10 +267,10 @@ public class FragmentSideMenuBindingImpl extends FragmentSideMenuBinding impleme
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.potatoes.setOnClickListener(mCallback3);
-            this.rice.setOnClickListener(mCallback4);
-            this.salad.setOnClickListener(mCallback1);
-            this.soup.setOnClickListener(mCallback2);
+            this.potatoes.setOnClickListener(mCallback7);
+            this.rice.setOnClickListener(mCallback8);
+            this.salad.setOnClickListener(mCallback5);
+            this.soup.setOnClickListener(mCallback6);
         }
         if ((dirtyFlags & 0xdL) != 0) {
             // api target 1
